@@ -1,0 +1,44 @@
+{
+  "name": "Project-exams-booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirill-Mukhortov/Project-exams-booking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirill-Mukhortov/Project-exams-booking/issues"
+  },
+  "homepage": "https://github.com/Kirill-Mukhortov/Project-exams-booking#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chartist": "^0.11.4",
+    "connect-mongo": "^4.4.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "http-errors": "^1.7.2",
+    "metrics-graphics": "^2.15.6",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.5.0",
+    "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

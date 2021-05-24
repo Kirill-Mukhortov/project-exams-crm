@@ -1,0 +1,33 @@
+<div class="tableBtn">
+  <div class="col-12">
+
+    {{#if isAdmin}}
+    <a type="submit" id="newExamenator" class="btn btn-primary" href="/registration">Новый экзаменатор</a>
+
+    <!-- Модалка -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Новый экзамен
+    </button>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-body">
+            {{> newExamForm}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {{/if}}
+
+    <a type="submit" class="btn btn-primary" href="/logout">Выйти</a>
+
+    {{#if user}}
+    <div>Привет, {{user.name}}</div>
+    {{/if}}
+
+  </div>
+</div>

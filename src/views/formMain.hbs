@@ -1,0 +1,51 @@
+{{> header}}
+{{> chart}}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ФИО</th>
+      <th scope="col">Дата</th>
+      <th scope="col">Время</th>
+      <th scope="col">Куратор</th>
+      <th scope="col">Экзаменатор</th>
+      <th scope="col">Группа</th>
+      <th scope="col">Попытка</th>
+      <th scope="col">Ссылка на Zoom</th>
+      <th scope="col">Результат</th>
+      <th scope="col">Действие</th>
+    </tr>
+  </thead>
+
+  <tbody class='table-container'>
+    {{#each table}}
+
+    <tr data-takeit="{{this._id}}" id="{{this._id}}">
+      <td>{{this.studentName}} </td>
+      <td>{{this.day}} {{this.month}} {{this.year}}</td>
+      <td>{{this.hour}} : {{this.minute}}</td>
+      <td>{{this.curator}}</td>
+      <td id="examinator">{{this.examinator.name}}</td>
+      <td>{{this.group}}</td>
+      <td>{{this.attemp}}</td>
+      <td>{{this.zoomLink}}</td>
+      <td>{{this.result}}</td>
+
+      {{#if ../isAdmin}}
+
+      <td><a type="submit" class="btn btn-primary" href="/user/table/{{ this._id }}/edit">Редактировать</a>
+      </td>
+      <td><button type="button" class="btn btn-danger deletebutton"><a class="delete"
+            href='/user/table'>Удалить</a></button>
+      </td>
+
+      {{else}}
+
+      <td><button id="takitbutton" data-take="{{this._id}}" type="button" class="btn btn-success takeitbutton"><a
+            class="takeit">Take it!</a></button></td>
+      {{/if}}
+
+      </form>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+/* #form{
+  display: flex;
+  flex-direction: row;
+  align-content:center
+}
+
+ .time {
+  display: flex;
+  flex-direction: row;
+ }
+ 
+.col-md-1 {
+  display: flex;
+  justify-content: center;
+}
+
+ .tableBtn {
+  display: flex;
+  flex-direction: row;
+  
+}   */
